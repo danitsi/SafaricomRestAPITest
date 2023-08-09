@@ -17,10 +17,15 @@ namespace SafaricomRestAPI.Controllers
             _context = context;
         }
 
+
+
+
         [HttpGet]
-        public async Task<ActionResult<List<Client>>> Get()
+        public async Task<ActionResult<List<Client>>> Get() 
+             
         {
             return Ok(await _context.Clients.ToListAsync());
+            return ;     
         }
         [HttpGet("{id}")]
         public async Task<ActionResult<Client>> Get(int id)
